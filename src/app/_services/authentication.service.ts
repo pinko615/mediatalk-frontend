@@ -116,4 +116,8 @@ editProfile(body: any, id){
     });
   }
 
+  addFollower(body) {
+    return this.http.post(this.apiUrl + '/users/addFollower', body);
+  }
+
 }

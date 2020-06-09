@@ -11,6 +11,10 @@ import * as moment from 'moment';
 })
 export class UserProfileComponent implements OnInit {
 
+  bodyFollower = {
+    followed_id: localStorage.getItem('id'),
+    follower_id: localStorage.getItem('userActual')
+  };
   bodyComment = {
     user_id: '',
     post_id: '',
@@ -49,6 +53,9 @@ export class UserProfileComponent implements OnInit {
     this.authService.getUserById(localStorage.getItem('userActual'))
     .subscribe(res => {
       this.actualUser = res;
+      for (let i = 0; i < this.actualUser['user'].post.length; i++) {
+        this.data[i] = moment(this.actualUser['user'].post[i].created_at).fromNow();
+     }
       console.log(this.actualUser);
     });
   }
@@ -81,7 +88,8 @@ export class UserProfileComponent implements OnInit {
 
   giveLike(post_id) {
     this.bodyLike.user_id = localStorage.getItem('id');
-    console.log(this.bodyLike);
+    this.bodyLike.post_id = post_id;
+    console.log(this.bodyLike, post_id);
     this.postsService.giveLike(this.bodyLike, post_id)
         .subscribe(res => {
           console.log(res);
@@ -102,6 +110,19 @@ export class UserProfileComponent implements OnInit {
         });
     }
   }
+
+  addFollower(){
+    this.authService.addFollower(this.bodyFollower)
+          .subscribe(res => {
+            console.log(res);
+            this.getLoggedUser();
+          });
+  }
+
+
+
+
+
 
 
 }

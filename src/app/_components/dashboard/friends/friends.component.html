@@ -22,10 +22,10 @@
             </div>
 			
             <!-- Row -->
-            <!-- *ngFor="let movie of movies | filter:searchFriends" -->
 			<div class="row">
                 <div class="col-12">
-                <div class="listings-container compact-list-layout margin-top-10">
+                <div class="listings-container compact-list-layout margin-top-10" *ngFor="let friend of actualUser">
+                    <!-- | filter:searchFriends -->
 				
                     <!-- Job Listing -->
                     <a href="dashboard-profile.html" class="job-listing">
@@ -40,220 +40,13 @@
     
                             <!-- Details -->
                             <div class="job-listing-description">
-                                <h3 class="job-listing-title">Clara J. Hartmann</h3>
+                                <h3 class="job-listing-title">{{friend.name}},{{friend[0].name}}</h3>
     
                                 <!-- Job Listing Footer -->
                                 <div class="job-listing-footer">
                                     <ul>
-                                        <li><i class="icon-feather-user"></i> iOS Developer</li>
-                                        <li><i class="icon-material-outline-location-on"></i> San Francisco</li>
-                                    </ul>
-                                </div>
-                            </div>
-    
-                            <!-- Bookmark -->
-                            <span class="bookmark-icon"></span>
-                        </div>
-                    </a>	
-    
-    
-                    <!-- Job Listing -->
-                    <a href="single-job-page.html" class="job-listing">
-    
-                        <!-- Job Listing Details -->
-                        <div class="job-listing-details">
-    
-                            <!-- Logo -->
-                            <div class="job-listing-company-logo">
-                                <img src="images/company-logo-05.png" alt="">
-                            </div>
-    
-                            <!-- Details -->
-                            <div class="job-listing-description">
-                                <h3 class="job-listing-title">Gilberto B. Hodges</h3>
-    
-                                <!-- Job Listing Footer -->
-                                <div class="job-listing-footer">
-                                    <ul>
-                                        <li><i class="icon-material-outline-business"></i> Angular Developer</li>
-                                        <li><i class="icon-material-outline-location-on"></i> Berlin</li>
-                                    </ul>
-                                </div>
-                            </div>
-    
-                            <!-- Bookmark -->
-                            <span class="bookmark-icon"></span>
-                            
-                        </div>
-                    </a>
-                    <!-- Job Listing -->
-                    <a href="single-job-page.html" class="job-listing">
-    
-                        <!-- Job Listing Details -->
-                        <div class="job-listing-details">
-    
-                            <!-- Logo -->
-                            <div class="job-listing-company-logo">
-                                <img src="images/company-logo-08.png" alt="">
-                            </div>
-    
-                            <!-- Details -->
-                            <div class="job-listing-description">
-                                <h3 class="job-listing-title">Mabel G. Waldroup</h3>
-    
-                                <!-- Job Listing Footer -->
-                                <div class="job-listing-footer">
-                                    <ul>
-                                        <li><i class="icon-material-outline-business"></i> Q/A Tester</li>
-                                        <li><i class="icon-material-outline-location-on"></i> Niza</li>
-                                    </ul>
-                                </div>
-                            </div>
-    
-                            <!-- Bookmark -->
-                            <span class="bookmark-icon"></span>
-                        </div>
-                    </a>
-                    
-    
-                    <!-- Job Listing -->
-                    <a href="single-job-page.html" class="job-listing">
-    
-                        <!-- Job Listing Details -->
-                        <div class="job-listing-details">
-    
-                            <!-- Logo -->
-                            <div class="job-listing-company-logo">
-                                <img src="images/company-logo-03.png" alt="">
-                            </div>
-    
-                            <!-- Details -->
-                            <div class="job-listing-description">
-                                <h3 class="job-listing-title">Benjamin J. Phillips</h3>
-    
-                                <!-- Job Listing Footer -->
-                                <div class="job-listing-footer">
-                                    <ul>
-                                        <li><i class="icon-material-outline-business"></i> IT Helpdesk</li>
-                                        <li><i class="icon-material-outline-location-on"></i> Sydney</li>
-                                    </ul>
-                                </div>
-                            </div>
-    
-                            <!-- Bookmark -->
-                            <span class="bookmark-icon"></span>
-                        </div>
-                    </a>
-    
-                    <!-- Job Listing -->
-                    <a href="single-job-page.html" class="job-listing">
-    
-                        <!-- Job Listing Details -->
-                        <div class="job-listing-details">
-    
-                            <!-- Logo -->
-                            <div class="job-listing-company-logo">
-                                <img src="images/company-logo-09.png" alt="">
-                            </div>
-    
-                            <!-- Details -->
-                            <div class="job-listing-description">
-                                <h3 class="job-listing-title">Sandra R. Medina</h3>
-    
-                                <!-- Job Listing Footer -->
-                                <div class="job-listing-footer">
-                                    <ul>
-                                        <li><i class="icon-material-outline-business"></i> DBA Oracle</li>
-                                        <li><i class="icon-material-outline-location-on"></i> Vancouver</li>
-                                    </ul>
-                                </div>
-                            </div>
-    
-                            <!-- Bookmark -->
-                            <span class="bookmark-icon"></span>
-                        </div>
-                    </a>
-    
-                    <!-- Job Listing -->
-                    <a href="single-job-page.html" class="job-listing">
-    
-                        <!-- Job Listing Details -->
-                        <div class="job-listing-details">
-    
-                            <!-- Logo -->
-                            <div class="job-listing-company-logo">
-                                <img src="images/company-logo-04.png" alt="">
-                            </div>
-    
-                            <!-- Details -->
-                            <div class="job-listing-description">
-                                <h3 class="job-listing-title">John N. Hardesty</h3>
-    
-                                <!-- Job Listing Footer -->
-                                <div class="job-listing-footer">
-                                    <ul>
-                                        <li><i class="icon-material-outline-business"></i> Java Developer</li>
-                                        <li><i class="icon-material-outline-location-on"></i> Buenos Aires</li>
-                                
-                                    </ul>
-                                </div>
-                            </div>
-    
-                            <!-- Bookmark -->
-                            <span class="bookmark-icon"></span>
-                        </div>
-                    </a>
-    
-    
-                    <!-- Job Listing -->
-                    <a href="single-job-page.html" class="job-listing">
-    
-                        <!-- Job Listing Details -->
-                        <div class="job-listing-details">
-    
-                            <!-- Logo -->
-                            <div class="job-listing-company-logo">
-                                <img src="images/company-logo-07.png" alt="">
-                            </div>
-    
-                            <!-- Details -->
-                            <div class="job-listing-description">
-                                <h3 class="job-listing-title">Christopher K. Manning</h3>
-    
-                                <!-- Job Listing Footer -->
-                                <div class="job-listing-footer">
-                                    <ul>
-                                        <li><i class="icon-material-outline-business"></i> Data Engineer</li>
-                                        <li><i class="icon-material-outline-location-on"></i> Prague</li>
-                                    </ul>
-                                </div>
-                            </div>
-    
-                            <!-- Bookmark -->
-                            <span class="bookmark-icon"></span>
-                        </div>
-                    </a>
-    
-                    <!-- Job Listing -->
-                    <a href="single-job-page.html" class="job-listing">
-    
-                        <!-- Job Listing Details -->
-                        <div class="job-listing-details">
-    
-                            <!-- Logo -->
-                            <div class="job-listing-company-logo">
-                                <img src="images/company-logo-06.png" alt="">
-                            </div>
-    
-                            <!-- Details -->
-                            <div class="job-listing-description">
-                                <h3 class="job-listing-title">Andrea H. Schaefer</h3>
-    
-                                <!-- Job Listing Footer -->
-                                <div class="job-listing-footer">
-                                    <ul>
-                                        <li><i class="icon-material-outline-business"></i> DevOps Engineer</li>
-                                        <li><i class="icon-material-outline-location-on"></i> Valencia</li>
+                                        <li><i class="icon-feather-user"></i> {{friend.tag}}</li>
+                                        <li><i class="icon-material-outline-location-on"></i> {{friend.city}}</li>
                                     </ul>
                                 </div>
                             </div>

@@ -100,6 +100,15 @@ export class MainComponent implements OnInit {
     //   });
 
     this.getAllPosts();
+    this.getLoggedUser();
+  }
+
+  getLoggedUser() {
+    this.authService.getUserById(localStorage.getItem('id'))
+    .subscribe(res => {
+      this.actualUser = res['user'].name;
+      console.log(res['user'].name);
+    });
   }
 
   getAllPosts() {
@@ -111,7 +120,7 @@ export class MainComponent implements OnInit {
         for (let i = 0; i < this.posts.length; i++) {
         // tslint:disable-next-line: radix
         if (this.posts[i].user_id === parseInt(localStorage.getItem('id'))) {
-          this.actualUser = this.posts[i].user.name;
+          // this.actualUser = this.posts[i].user.name;
           console.log(res[i].user_id, localStorage.getItem('id'), this.actualUser);
         }
         this.postComments[i] = this.posts[i]['comments'];
@@ -174,7 +183,7 @@ export class MainComponent implements OnInit {
   },
    err => console.log(err)
   );
-  
+
   }
 
   // goToLoggedUser(id, i) {

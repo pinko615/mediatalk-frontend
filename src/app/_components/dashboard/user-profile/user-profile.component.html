@@ -29,10 +29,10 @@
                                                             <i class="icon-material-outline-location-on like-post"></i>{{actualUser['user']?.city}}
                                                         </li>
                                                         <li>
-                                                            <i class="icon-feather-users like-post"></i> Friends (239)
+                                                            <i class="icon-feather-users like-post"></i> Friends ({{actualUser['user']?.following.length}})
                                                         </li>
                                                         <li>
-                                                            <a routerLink="/settings"><i class="icon-material-outline-add like-post"></i> Add friend</a>
+                                                            <a (click)="addFollower()"><i class="icon-material-outline-add like-post"></i> Add friend</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -88,7 +88,7 @@
                                                             </div>
                                                             <div class="d-flex mb-1 mt-1">
                                                                 <div class="p-2">
-                                                                    <div class="detail-item"><a style="cursor: pointer" (click)="giveLike(post['id'])">
+                                                                    <div class="detail-item"><a style="cursor: pointer" (click)="giveLike(post.id)">
                                                                         <i class="icon-material-outline-thumb-up like-post give-like"></i> {{post['likes'].length}}</a></div>
                                                                 </div>
                                                                 <div class="p-2">

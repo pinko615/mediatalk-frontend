@@ -39,7 +39,7 @@ export class SignInComponent implements OnInit {
       localStorage.setItem('id', res['user']['id']);
       this.router.navigate(['/']);
     }, error => {
-      this.warningMessage = "Invalid Credentials!";
+      this.warningMessage = 'Invalid Credentials!';
       console.error(error);
     } );
   }
