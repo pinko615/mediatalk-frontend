@@ -1,0 +1,52 @@
+
+.mh {
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vh {
+    height: 100vh;
+}
+
+.sections {
+    padding: 80px 20px;
+}
+
+.dark-section {
+    background-color: #F7F8FB;
+}
+
+.link {
+    font-weight: 800;
+}
+
+.dot {
+    height: 60px;
+    width: 60px;
+    background-color: #EBF0FC;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.cta {
+    background-color: #3972E0;
+}
+
+.cta h1 {
+    color: white;
+    padding-top: 50px;
+    margin: 0px;
+    margin-bottom: 30px;
+}
+
+.button-cta {
+    margin-bottom: 50px;
+}
+
+.icons {
+    display: block;
+    margin: auto;
+}
