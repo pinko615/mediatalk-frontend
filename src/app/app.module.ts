@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './_components/landing/landing.component';
 import { AuthNavComponent } from './_components/navigation/auth-nav/auth-nav.component';
 import { GuestNavComponent } from './_components/navigation/guest-nav/guest-nav.component';
+import { MainComponent } from './_components/dashboard/main/main.component';
+import { SidebarComponent } from './_components/dashboard/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     AuthNavComponent,
-    GuestNavComponent
+    GuestNavComponent,
+    MainComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

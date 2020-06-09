@@ -1,0 +1,44 @@
+<div class="dashboard-sidebar">
+    <div class="dashboard-sidebar-inner" data-simplebar>
+        <div class="dashboard-nav-container">
+            <a href="#" class="dashboard-responsive-nav-trigger">
+                <span class="hamburger hamburger--collapse" >
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </span>
+                <span class="trigger-title">Dashboard Navigation</span>
+            </a>
+            <div class="dashboard-nav">
+                <div class="dashboard-nav-inner">
+                    <div class="input-with-icon-left no-border">
+                        <i class="icon-material-outline-search"></i>
+                        <input type="text" class="input-text" placeholder="Search...">
+                    </div>
+
+                    <ul data-submenu-title="Start">
+                        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/"><i class="icon-line-awesome-home"></i> Home</a></li>
+                        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/friends"><i class="icon-feather-users"></i> Friends <span class="nav-tag">2</span></a></li>
+                        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a href="#"><i class="icon-line-awesome-newspaper-o"></i> News</a></li>
+                        <li><a href="#"><i class="icon-line-awesome-video-camera"></i> Videos</a></li>
+                        <li><a href="#"><i class="icon-feather-music"></i> Music</a></li>
+                        <li><a href="#"><i class="icon-feather-camera"></i> Photography</a></li>
+                    </ul>
+                    
+                    <ul data-submenu-title="Organize and Manage">
+                        <li><a href="#"><i class="icon-material-outline-business-center"></i> Jobs</a>
+                        </li>
+                        <li><a href="#"><i class="icon-material-outline-assignment"></i> Tasks</a>
+                        </li>
+                    </ul>
+
+                    <ul data-submenu-title="Account">
+                        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/profile"><i class="icon-feather-user"></i> Profile</a></li>
+                        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/settings"><i class="icon-material-outline-settings"></i> Settings</a></li>
+                        <!-- <li><a (click)="logout()"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li> -->
+                    </ul>  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
