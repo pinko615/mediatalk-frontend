@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SignInComponent } from './_components/auth/sign-in/sign-in.component';
+import { SignUpComponent } from './_components/auth/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SignInComponent } from './_components/auth/sign-in/sign-in.component';
     MainComponent,
     SidebarComponent,
     FooterComponent,
-    SignInComponent
+    SignInComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

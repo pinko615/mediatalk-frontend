@@ -1,8 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('./assets/blue.css');
 
-
-
 html, body {
     margin: 0;
     padding:0;
@@ -118,6 +116,3 @@ html, body {
   .give-like:hover {
     font-size: 20px;
   }
-  
-
-@import url('./app/_components/dashboard/dashboard-styles.scss');

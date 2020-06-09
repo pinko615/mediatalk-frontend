@@ -174,6 +174,7 @@ export class MainComponent implements OnInit {
   },
    err => console.log(err)
   );
+  
   }
 
   // goToLoggedUser(id, i) {

@@ -27,23 +27,23 @@ export class AuthenticationService {
     return this.http.post<any>(this.apiUrl + '/users/login', body);
   }
 
-// register(username: string, email: string, password: string): Observable<any> {
-//     return this.http.post(this.apiUrl + '/users/register', { email: email, name: username, 
-//             password: password }, { headers: this.headers } )
-//         .pipe(
-//             map((response: Response) => {
-//                 // register successful if there's a jwt token in the response
-//                 this.token = response['token'];
-//                 let email = response['email'];
-//                 if (this.token) {
-//                     // store email and jwt token in local storage to keep user logged in between page refreshes
-//                     localStorage.setItem('user',
-//                         JSON.stringify({ token: this.token }));
-//                 }
-//                 return response;
-//             })
-//         );
-// }
+register(username: string, email: string, password: string): Observable<any> {
+    return this.http.post(this.apiUrl + '/users/register', { email: email, name: username, 
+            password: password }, { headers: this.headers } )
+        .pipe(
+            map((response: Response) => {
+                // register successful if there's a jwt token in the response
+                this.token = response['token'];
+                let email = response['email'];
+                if (this.token) {
+                    // store email and jwt token in local storage to keep user logged in between page refreshes
+                    localStorage.setItem('user',
+                        JSON.stringify({ token: this.token }));
+                }
+                return response;
+            })
+        );
+}
 
 logout(id) {
     return this.http.get<any>(this.apiUrl + `/users/logout/${id}`,
