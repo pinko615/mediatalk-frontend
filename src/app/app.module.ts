@@ -9,6 +9,9 @@ import { GuestNavComponent } from './_components/navigation/guest-nav/guest-nav.
 import { MainComponent } from './_components/dashboard/main/main.component';
 import { SidebarComponent } from './_components/dashboard/sidebar/sidebar.component';
 import { FooterComponent } from './_components/dashboard/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { FooterComponent } from './_components/dashboard/footer/footer.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

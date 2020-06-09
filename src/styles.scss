@@ -1,1 +1,123 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('./assets/blue.css');
+
+
+
+html, body {
+    margin: 0;
+    padding:0;
+    line-height: normal;
+    font-family: 'Muli', 'Helvetica Neue', Arial, sans-serif;
+  
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    scroll-behavior: smooth;
+  }
+  
+  div {
+    box-sizing: border-box;
+  }
+  
+  pre {
+    margin: 0;
+  }
+  
+  code {
+    white-space: pre;
+  }
+  
+  h4, h5, p {
+    margin: 0 0 10px;
+  }
+  
+  p {
+    line-height: 1.5;
+  }
+  
+  
+  .inline {
+    display: inline-block;
+    padding: 0 0.5em;
+    white-space: normal;
+    vertical-align: text-bottom;
+  }
+  
+  
+  .btn-primary {
+    background-color: #3972E0;
+    border: none;
+  }
+  
+  .vh {
+    height: 100vh;
+  }
+  
+  .mh {
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-backdrop {
+    background-color: transparent;
+  }
+  
+  .profile-img {
+    border-radius: 50%;
+    width: 40px;
+  }
+  
+  .like-post {
+    color: #3972E0;
+  }
+  
+  .ngx-pagination .current {
+    padding: 0.1875rem 0.625rem;
+    background: #3972E0 !important;
+    border: none;
+    color: #fefefe;
+    cursor: default;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .btn-secondary {
+    color: #3972E0 !important;
+    border: none !important;
+    background-color: transparent !important;
+    font-size: 20px !important;
+    padding: 0px !important;
+  }
+  
+  .dropdown-toggle::after {
+    display: none !important;
+  }
+  
+  @import url('./app/_components/dashboard/dashboard-styles.scss');
+  
+  .btn-secondary.focus, .btn-secondary:focus {
+    
+    box-shadow: none !important;
+  }
+  
+  .job-listing .job-listing-footer ul li i {
+    color: #3972E0;
+  }
+  
+  .give-like {
+    transition: all .2s ease-in-out;
+  }
+  
+  .give-like:hover {
+    font-size: 20px;
+  }
+  
+
+@import url('./app/_components/dashboard/dashboard-styles.scss');
