@@ -4,6 +4,7 @@ import { LandingComponent } from './_components/landing/landing.component';
 import { MainComponent } from './_components/dashboard/main/main.component';
 import { SignInComponent } from './_components/auth/sign-in/sign-in.component';
 import { SignUpComponent } from './_components/auth/sign-up/sign-up.component';
+import { ProfileComponent } from './_components/dashboard/profile/profile.component';
 
 
 const routes: Routes = [
@@ -18,11 +19,14 @@ const routes: Routes = [
   {
     path: 'sign-in',
     component: SignInComponent
-  }
-  ,
+  },
   {
     path: 'sign-up',
     component: SignUpComponent
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent
   }
 ];
 

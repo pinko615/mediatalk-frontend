@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SignInComponent } from './_components/auth/sign-in/sign-in.component';
 import { SignUpComponent } from './_components/auth/sign-up/sign-up.component';
+import { ProfileComponent } from './_components/dashboard/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SignUpComponent } from './_components/auth/sign-up/sign-up.component';
     SidebarComponent,
     FooterComponent,
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
