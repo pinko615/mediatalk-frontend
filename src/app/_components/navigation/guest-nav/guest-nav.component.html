@@ -1,1 +1,12 @@
-<p>guest-nav works!</p>
+<!-- <header *ngIf="!authService.isLogged()"> -->
+    <nav class="container navbar navbar-light justify-content-between">
+      <a class="navbar-brand" href="#">MediaTalk</a>
+      <div class="nav-menu">
+      <a href="/#how-it-works"><span>How it Works</span></a>
+      <a href="#"><span>About</span></a>
+      <a href="#"><span>Reviews</span></a>
+      <a routerLink="sign-in"><span>Sign In</span></a>
+      <a class="btn btn-primary" routerLink="sign-up">Sign Up</a>
+      </div>
+    </nav>
+<!-- </header> -->
