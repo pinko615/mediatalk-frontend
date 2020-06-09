@@ -5,6 +5,7 @@ import { MainComponent } from './_components/dashboard/main/main.component';
 import { SignInComponent } from './_components/auth/sign-in/sign-in.component';
 import { SignUpComponent } from './_components/auth/sign-up/sign-up.component';
 import { ProfileComponent } from './_components/dashboard/profile/profile.component';
+import { SettingsComponent } from './_components/dashboard/settings/settings.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent
+  },
+  {
+    path: 'settings',
+    component: SettingsComponent
   }
 ];
 

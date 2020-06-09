@@ -15,6 +15,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { SignInComponent } from './_components/auth/sign-in/sign-in.component';
 import { SignUpComponent } from './_components/auth/sign-up/sign-up.component';
 import { ProfileComponent } from './_components/dashboard/profile/profile.component';
+import { SettingsComponent } from './_components/dashboard/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ProfileComponent } from './_components/dashboard/profile/profile.compon
     FooterComponent,
     SignInComponent,
     SignUpComponent,
-    ProfileComponent
+    ProfileComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
