@@ -17,6 +17,7 @@ import { SignUpComponent } from './_components/auth/sign-up/sign-up.component';
 import { ProfileComponent } from './_components/dashboard/profile/profile.component';
 import { SettingsComponent } from './_components/dashboard/settings/settings.component';
 import { FriendsComponent } from './_components/dashboard/friends/friends.component';
+import { GuestFooterComponent } from './_components/navigation/guest-footer/guest-footer.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FriendsComponent } from './_components/dashboard/friends/friends.compon
     SignUpComponent,
     ProfileComponent,
     SettingsComponent,
-    FriendsComponent
+    FriendsComponent,
+    GuestFooterComponent
   ],
   imports: [
     BrowserModule,
