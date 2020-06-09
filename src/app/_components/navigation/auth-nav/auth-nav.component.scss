@@ -167,9 +167,12 @@ img { max-width: 100%; }
 }
 
 #logo a {
-	height: 42px;
+    height: 42px;
+    font-size: 26px;
+    font-weight: 700;
+    color: black;
 	width: auto;
-  top: 50%;
+    top: 50%;
 	position: relative;
 	transform: translate3d(10%,45%,0);
 }

@@ -6,6 +6,7 @@ import { SignInComponent } from './_components/auth/sign-in/sign-in.component';
 import { SignUpComponent } from './_components/auth/sign-up/sign-up.component';
 import { ProfileComponent } from './_components/dashboard/profile/profile.component';
 import { SettingsComponent } from './_components/dashboard/settings/settings.component';
+import { FriendsComponent } from './_components/dashboard/friends/friends.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'settings',
     component: SettingsComponent
+  },
+  {
+    path: 'friends',
+    component: FriendsComponent
   }
 ];
 
