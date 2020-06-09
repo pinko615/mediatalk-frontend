@@ -47,7 +47,7 @@ export class SignUpComponent implements OnInit {
       }
       // if not errors - navigate to home
       if (!this.warningMessage) {
-        this.router.navigate(['/']);
+        this.router.navigate(['/settings']);
       }
     }, error => {
       this.warningMessage = 'Wrong credentials!';

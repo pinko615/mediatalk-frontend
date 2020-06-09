@@ -18,6 +18,7 @@ import { ProfileComponent } from './_components/dashboard/profile/profile.compon
 import { SettingsComponent } from './_components/dashboard/settings/settings.component';
 import { FriendsComponent } from './_components/dashboard/friends/friends.component';
 import { GuestFooterComponent } from './_components/navigation/guest-footer/guest-footer.component';
+import { UserProfileComponent } from './_components/dashboard/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { GuestFooterComponent } from './_components/navigation/guest-footer/gues
     ProfileComponent,
     SettingsComponent,
     FriendsComponent,
-    GuestFooterComponent
+    GuestFooterComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,

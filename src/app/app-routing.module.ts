@@ -7,6 +7,7 @@ import { SignUpComponent } from './_components/auth/sign-up/sign-up.component';
 import { ProfileComponent } from './_components/dashboard/profile/profile.component';
 import { SettingsComponent } from './_components/dashboard/settings/settings.component';
 import { FriendsComponent } from './_components/dashboard/friends/friends.component';
+import { UserProfileComponent } from './_components/dashboard/user-profile/user-profile.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'friends',
     component: FriendsComponent
+  },
+  {
+    path: 'user/:lastName',
+    component: UserProfileComponent
   }
 ];
 
