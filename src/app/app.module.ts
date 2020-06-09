@@ -8,6 +8,7 @@ import { AuthNavComponent } from './_components/navigation/auth-nav/auth-nav.com
 import { GuestNavComponent } from './_components/navigation/guest-nav/guest-nav.component';
 import { MainComponent } from './_components/dashboard/main/main.component';
 import { SidebarComponent } from './_components/dashboard/sidebar/sidebar.component';
+import { FooterComponent } from './_components/dashboard/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SidebarComponent } from './_components/dashboard/sidebar/sidebar.compon
     AuthNavComponent,
     GuestNavComponent,
     MainComponent,
-    SidebarComponent
+    SidebarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
