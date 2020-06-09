@@ -1,51 +1,56 @@
-<div class="container vh">
+<div class="container">
     <div class="row">
-        <div class="col-5">
-          <img src="../../../../assets/asd.png" width="100%" alt="">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 align-self-center">
+            <img src="../../../assets/img/ilus.png" alt="Ilustracion" width="100%" srcset="">
         </div>
-        <div class="col-7 align-self-center">
-                
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 align-self-center">
             <div class="row justify-content-center">
-              <div class="col-8">
-              <h2>Sign up to <strong>MediaTalk</strong></h2>
-              <p class="mt-4">Already a member? <a href="/sign-in.html">Sign In</a></p>
-              <form #registerForm="ngForm" (ngSubmit)="onRegister()">
+                <div class="col-8">
+                    <h2>Sign up to <strong>MediaTalk</strong></h2>
+                    <p class="mt-4 mb-3">Already a member? <a routerLink="/sign-in">Sign In</a></p>
+  
+                    <form #registerForm="ngForm" (ngSubmit)="onRegister()">
                   <div class="form-group">
-                    <label for="inputName">Name</label>
-                    <input class="form-control"
-                      [(ngModel)]="name"
-                      name="username"
+                    <div class="input-with-icon-left no-border">
+                        <i class="icon-material-outline-account-circle"></i>
+                    <input class="input-text"
+                    [(ngModel)]="name"
+                      name="name"
                       pattern="[a-zA-Z0-9]{2,30}"
                       required="required"
-                      placeholder="" />
+                      placeholder="Name" />
+                    </div>
+                    
                   </div>
-                <div class="form-group">
-                  <label for="inputEmail">Email</label>
-                  <input type="email" class="form-control"
+                  <div class="form-group mt-2">
+                    <div class="input-with-icon-left no-border">
+                        <i class="icon-line-awesome-envelope"></i>
+                    <input class="input-text"
                     [(ngModel)]="email"
                     name="email"
                     pattern="^\S+@\S+$"
                     required="required"
-                    placeholder="" />
-                </div>
-                <div class="form-group">
-                  <label for="inputPassword">Password</label>
-                  <input type="password" class="form-control"
+                    placeholder="Email address" />
+                    </div>
+                    
+                  </div>
+                  <div class="form-group mt-2">
+                    <div class="input-with-icon-left no-border">
+                        <i class="icon-material-outline-lock"></i>
+                    <input class="input-text"
                     [(ngModel)]="password"
                     name="password"
                     required="required"
                     pattern=".{6,30}"
                     type="password"
-                    placeholder="6+ characters" />
-                    <div *ngIf="warningMessage">
-                      {{warningMessage}}
-                   </div>
-                </div>
-                <button type="submit" class="btn btn-primary">Create Account</button>
-              </form>
+                    placeholder="Password" />
+                    </div>
+                  </div>
+  
+                  <button type="submit" class="btn btn-primary mt-2">Create Account</button>
+                </form>
+              </div>
             </div>
-          </div>
         </div>
     </div>
-  </div>
-  <app-guest-footer></app-guest-footer>
+</div>
