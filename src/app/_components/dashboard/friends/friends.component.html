@@ -1,17 +1,7 @@
 <div class="dashboard-container">
-
-	<!-- Dashboard Sidebar
-	================================================== -->
-	<app-sidebar></app-sidebar>
-	<!-- Dashboard Sidebar / End -->
-
-
-	<!-- Dashboard Content
-	================================================== -->
-  <div class="dashboard-content-container" data-simplebar>
-		<div class="dashboard-content-inner" >
-			
-			<!-- Dashboard Headline -->
+    <app-sidebar></app-sidebar>
+    <div class="dashboard-content-container" data-simplebar>
+		<div class="dashboard-content-inner">
 			<div class="dashboard-headline">
 				<h3>My Friends</h3>
             </div>
@@ -20,30 +10,18 @@
                     <input id="input-search" class="search_input mt-4" type="text" [(ngModel)]="searchFriends" [ngModelOptions]="{standalone: true}" autocomplete="off" placeholder="Search by name">
                 </div>
             </div>
-			
-            <!-- Row -->
 			<div class="row">
                 <div class="col-12">
-                <div class="listings-container compact-list-layout margin-top-10" *ngFor="let friend of actualUser['user']['following'] | filter:searchFriends, let i = index;">
-				
-                    <!-- Job Listing -->
-                    <a class="job-listing">
-    
-                        <!-- Job Listing Details -->
-                        <div class="job-listing-details">
-    
-                            <!-- Logo -->
-                            <div class="job-listing-company-logo">
-                                <img src="http://localhost:8000/images/users/{{friend.image}}" alt="">
-                            </div>
-    
-                            <!-- Details -->
-                            <div class="job-listing-description">
-                                <a style="cursor: pointer;" (click)="goToLoggedUser(i)">
-                                <h3 class="job-listing-title">{{friend.name}} {{friend.surname}}</h3>
-                                </a>
-    
-                                <!-- Job Listing Footer -->
+                    <div class="listings-container compact-list-layout margin-top-10" *ngFor="let friend of actualUser['user']['following'] | filter:searchFriends, let i = index;">
+                        <a class="job-listing">
+                            <div class="job-listing-details">
+                                <div class="job-listing-company-logo">
+                                    <img src="http://localhost:8000/images/users/{{friend.image}}" alt="">
+                                </div>
+                                <div class="job-listing-description">
+                                    <a style="cursor: pointer;" (click)="goToLoggedUser(i)">
+                                        <h3 class="job-listing-title">{{friend.name}} {{friend.surname}}</h3>
+                                    </a>
                                 <div class="job-listing-footer">
                                     <ul>
                                         <li><i class="icon-feather-user"></i> {{friend.tag}}</li>
@@ -51,33 +29,14 @@
                                     </ul>
                                 </div>
                             </div>
-    
-                            <!-- Bookmark -->
                             <span class="bookmark-icon"></span>
                         </div>
                     </a>
                 </div>
-				
             </div>
-                <!-- Row / End -->
-            </div>
-			<!-- Row / End -->
-				
-
-			
-
-			<!-- Footer -->
-			<div class="dashboard-footer-spacer"></div>
-			<div class="small-footer margin-top-15">
-				<div class="small-footer-copyrights">
-					© 2020 <strong>MediaTalk</strong>. All Rights Reserved | Visit full project in <a href="#"><i class="fab fa-github"></i> GitHub</a>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-			<!-- Footer / End -->
-
+        </div>
+		<div class="dashboard-footer-spacer"></div>
+		    <app-footer></app-footer>
 		</div>
 	</div>
-	<!-- Dashboard Content / End -->
-
 </div>

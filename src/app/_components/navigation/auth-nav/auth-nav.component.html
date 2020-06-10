@@ -1,166 +1,31 @@
 <header id="header" *ngIf="authService.isLogged()">
     <div class="container-fluid">
-              
-      <!-- Left Side Content -->
       <div class="left-side">
-        
-        <!-- Logo -->
         <div id="logo">
           <a class="navbar-brand" routerLink="/">MediaTalk</a>
         </div>
-  
-        <!-- Main Navigation -->
-        
         <div class="clearfix"></div>
-        <!-- Main Navigation / End -->
-        
       </div>
-      <!-- Left Side Content / End -->
-  
-  
-      <!-- Right Side Content / End -->
       <div class="right-side">
-  
-  
-        <!--  User Notifications -->
         <div class="header-widget hide-on-mobile">
-          
-          <!-- Notifications -->
           <div class="header-notifications">
-  
-            <!-- Trigger -->
             <div class="header-notifications-trigger">
               <a href="#"><i class="icon-feather-bell"></i><span>4</span></a>
             </div>
-  
-            <!-- Dropdown -->
-            <div class="header-notifications-dropdown">
-  
-              <div class="header-notifications-headline">
-                <h4>Notifications</h4>
-                <button class="mark-as-read ripple-effect-dark" title="Mark all as read" data-tippy-placement="left">
-                  <i class="icon-feather-check-square"></i>
-                </button>
-              </div>
-  
-              <div class="header-notifications-content">
-                <div class="header-notifications-scroll" data-simplebar>
-                  <ul>
-                    <!-- Notification -->
-                    <li class="notifications-not-read">
-                      <a href="dashboard-manage-candidates.html">
-                        <span class="notification-icon"><i class="icon-material-outline-group"></i></span>
-                        <span class="notification-text">
-                          <strong>Michael Shannah</strong> applied for a job <span class="color">Full Stack Software Engineer</span>
-                        </span>
-                      </a>
-                    </li>
-  
-                    <!-- Notification -->
-                    <li>
-                      <a href="dashboard-manage-bidders.html">
-                        <span class="notification-icon"><i class=" icon-material-outline-gavel"></i></span>
-                        <span class="notification-text">
-                          <strong>Gilbert Allanis</strong> placed a bid on your <span class="color">iOS App Development</span> project
-                        </span>
-                      </a>
-                    </li>
-  
-                    <!-- Notification -->
-                    <li>
-                      <a href="dashboard-manage-jobs.html">
-                        <span class="notification-icon"><i class="icon-material-outline-autorenew"></i></span>
-                        <span class="notification-text">
-                          Your job listing <span class="color">Full Stack PHP Developer</span> is expiring.
-                        </span>
-                      </a>
-                    </li>
-  
-                    <!-- Notification -->
-                    <li>
-                      <a href="dashboard-manage-candidates.html">
-                        <span class="notification-icon"><i class="icon-material-outline-group"></i></span>
-                        <span class="notification-text">
-                          <strong>Sindy Forrest</strong> applied for a job <span class="color">Full Stack Software Engineer</span>
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-  
-            </div>
-  
           </div>
-          
-          <!-- Messages -->
           <div class="header-notifications">
             <div class="header-notifications-trigger">
               <a href="#"><i class="icon-feather-mail"></i><span>3</span></a>
             </div>
-  
-            <!-- Dropdown -->
-            <div class="header-notifications-dropdown">
-  
-              <div class="header-notifications-headline">
-                <h4>Messages</h4>
-                <button class="mark-as-read ripple-effect-dark" title="Mark all as read" data-tippy-placement="left">
-                  <i class="icon-feather-check-square"></i>
-                </button>
-              </div>
-  
-              <a href="dashboard-messages.html" class="header-notifications-button ripple-effect button-sliding-icon">View All Messages<i class="icon-material-outline-arrow-right-alt"></i></a>
-            </div>
           </div>
-  
         </div>
-        <!--  User Notifications / End -->
-  
-        <!-- User Menu -->
         <div class="header-widget">
-  
-          <!-- Messages -->
           <div class="header-notifications user-menu">
             <div class="header-notifications-trigger">
               <a routerLink="/profile"><div class="user-avatar status-online"><img src="http://localhost:8000/images/users/{{actualUser['user']?.image}}" alt=""></div></a>
             </div>
-  
-            <!-- Dropdown -->
-            <div class="header-notifications-dropdown">
-  
-              <!-- User Status -->
-              <div class="user-status">
-  
-                <!-- User Name / Avatar -->
-                <div class="user-details">
-                  <div class="user-name">
-                    Martin Pinto <span>Full Stack Developer</span>
-                  </div>
-                </div>
-            </div>
-            
-            <ul class="user-menu-small-nav">
-              <li><a href="dashboard-settings.html"><i class="icon-material-outline-settings"></i> Settings</a></li>
-              <li><a href="index-logged-out.html"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
-            </ul>
-  
-            </div>
           </div>
-  
         </div>
-        <!-- User Menu / End -->
-  
-        <!-- Mobile Navigation Button -->
-        <span class="mmenu-trigger">
-          <button class="hamburger hamburger--collapse" type="button">
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-          </button>
-        </span>
-  
       </div>
-      <!-- Right Side Content / End -->
-  
-    </div>
-    </header>
+  </div>
+</header>
