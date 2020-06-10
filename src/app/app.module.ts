@@ -21,6 +21,14 @@ import { GuestFooterComponent } from './_components/navigation/guest-footer/gues
 import { UserProfileComponent } from './_components/dashboard/user-profile/user-profile.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AuthGuard } from './_guards/auth.guards';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+import { NgZorroAntdModule } from 'ng-zorro-antd';
+
+registerLocaleData(en);
 
 @NgModule({
   declarations: [
@@ -45,9 +53,11 @@ import { AuthGuard } from './_guards/auth.guards';
     FormsModule,
     HttpClientModule,
     NgxPaginationModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    BrowserAnimationsModule,
+    NgZorroAntdModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, { provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
