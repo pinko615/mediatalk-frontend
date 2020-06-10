@@ -55,6 +55,13 @@ logout(id) {
       );
     }
 
+  editImageProfile(image: FormData){
+      return this.http.post<any>(this.apiUrl + `/users/updateProfile/`, image, {
+        headers: {
+          Authorization: 'Bearer ' + localStorage.getItem('user')
+        }
+      });
+    }
 
     // clear token remove user from local storage to log user out
 

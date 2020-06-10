@@ -35,14 +35,28 @@
 							
 							<div class="row">
 								
-								<form #profileform="ngForm">
+								<form #profileform="ngForm" (submit)="editImage(image)">
 								<div class="col-auto">
-									<div class="avatar-wrapper" data-tippy-placement="bottom" title="Change Avatar">
+                                    <div class="submit-field">
+                                        <h5>Profile image</h5>
+                                    </div>
+                                        <div class="avatar-wrapper">
+                                            <label for="exampleFormControlFile1">
+                                                <img class="profile-pic" src="../../../../assets/img/profile.jpg" alt=""/>
+                                            </label>
+                                            <input type="file" ngModel name="image" #image class="file-upload"  id="exampleFormControlFile1">
+                                        </div>
+                                </div>
+                                <div class="col-auto mb-3">
+                                    <button class="btn btn-primary" type="submit">Save image</button>
+                                </div>
+                                        <!-- <div class="avatar-wrapper" data-tippy-placement="bottom" title="Change Avatar">
 										<img class="profile-pic" src="images/user-avatar-placeholder.png" alt="" />
 										<div class="upload-button"></div>
 										<input class="file-upload" type="file" accept="image/*"/>
-									</div>
-								</div>
+                                    </div> -->
+									
+								
 								
 								<div class="col">
 									<div class="row">

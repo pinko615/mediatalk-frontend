@@ -194,11 +194,7 @@ export class MainComponent implements OnInit {
   goToLoggedUser(id, i) {
     console.log(id, i);
     localStorage.setItem('userActual', id);
-    if (localStorage.getItem('id') === localStorage.getItem('userActual')) {
-      setTimeout(() => this.router.navigate(['profile']), 1000);
-    } else {
-      setTimeout(() => this.router.navigate([`user/${this.posts[i]['user'].name}`]), 1000);
-    }
+    this.router.navigate([`user/${this.posts[i]['user'].name}`]);
   }
 
   // getLoggedUser() {

@@ -19,6 +19,8 @@ import { SettingsComponent } from './_components/dashboard/settings/settings.com
 import { FriendsComponent } from './_components/dashboard/friends/friends.component';
 import { GuestFooterComponent } from './_components/navigation/guest-footer/guest-footer.component';
 import { UserProfileComponent } from './_components/dashboard/user-profile/user-profile.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { AuthGuard } from './_guards/auth.guards';
 
 @NgModule({
   declarations: [
@@ -42,9 +44,10 @@ import { UserProfileComponent } from './_components/dashboard/user-profile/user-
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    Ng2SearchPipeModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

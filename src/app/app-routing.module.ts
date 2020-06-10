@@ -8,6 +8,7 @@ import { ProfileComponent } from './_components/dashboard/profile/profile.compon
 import { SettingsComponent } from './_components/dashboard/settings/settings.component';
 import { FriendsComponent } from './_components/dashboard/friends/friends.component';
 import { UserProfileComponent } from './_components/dashboard/user-profile/user-profile.component';
+import { AuthGuard } from './_guards/auth.guards';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: MainComponent
+    component: MainComponent,
+    // canActivate: [AuthGuard]
   },
   {
     path: 'sign-in',
@@ -29,19 +31,23 @@ const routes: Routes = [
   },
   {
     path: 'profile',
-    component: ProfileComponent
+    component: ProfileComponent,
+    // canActivate: [AuthGuard]
   },
   {
     path: 'settings',
-    component: SettingsComponent
+    component: SettingsComponent,
+    // canActivate: [AuthGuard]
   },
   {
     path: 'friends',
-    component: FriendsComponent
+    component: FriendsComponent,
+    // canActivate: [AuthGuard]
   },
   {
     path: 'user/:lastName',
-    component: UserProfileComponent
+    component: UserProfileComponent,
+    // canActivate: [AuthGuard]
   }
 ];
 

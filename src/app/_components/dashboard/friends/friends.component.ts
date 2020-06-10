@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from 'src/app/_services/authentication.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-friends',
@@ -8,12 +9,14 @@ import { AuthenticationService } from 'src/app/_services/authentication.service'
 })
 export class FriendsComponent implements OnInit {
 
+  posts: any;
   searchFriends;
 
-  actualUser = [];
+  actualUser: any = [];
 
   constructor(
-    private authService: AuthenticationService
+    private authService: AuthenticationService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -23,9 +26,14 @@ export class FriendsComponent implements OnInit {
   getLoggedUser() {
     this.authService.getUserById(localStorage.getItem('id'))
     .subscribe(res => {
-      this.actualUser = res['user'];
-      console.log(this.actualUser['following']);
+      this.actualUser = res;
+      console.log(this.actualUser);
     });
   }
+
+  goToLoggedUser(i) {
+    console.log(i, this.actualUser['user']['following'][i].name);
+    setTimeout(() => this.router.navigate([`user/${this.actualUser['user']['following'][i].name}`]), 1000);
+    }
 
 }

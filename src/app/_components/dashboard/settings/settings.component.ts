@@ -18,7 +18,19 @@ export class SettingsComponent implements OnInit {
     this.authenticationService.editProfile(body.value, parseInt(localStorage.getItem('id')))
       .subscribe(res => {
         console.log(res);
-      });
+      }); 
+    body.reset();
+
   }
+  editImage(imageInput){
+    console.log(imageInput);
+    const imageFormData = new FormData();
+    if (imageInput.files[0]) {  imageFormData.set('img', imageInput.files[0]); }
+  // tslint:disable-next-line: radix
+    this.authenticationService.editImageProfile(imageFormData)
+    .subscribe(res => {
+      console.log(res);
+    });
+}
 
 }

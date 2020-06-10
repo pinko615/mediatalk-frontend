@@ -19,7 +19,8 @@
                                     <div class="col-md-12">
                                         <div class="single-page-header-inner">
                                             <div class="left-side ml-4">
-                                                <div class="header-image freelancer-avatar"><img src="{{actualUser['user']?.image}}"
+                                                <img class="main-avatar">
+                                                <div class="header-image freelancer-avatar"><img src="http://localhost:8000/images/users/{{actualUser['user']?.image}}"
                                                         alt=""></div>
                                                 <div class="header-details">
                                                     <h3>{{actualUser['user']?.name}} {{actualUser['user']?.surname}}
@@ -90,7 +91,7 @@
                                                             <!-- Avatar -->
                                                             <div class="freelancer-avatar">
                                                                 <div class="verified-badge"></div>
-                                                                <a href="#"><img src="{{actualUser['user']?.image}}" alt=""></a>
+                                                                <a href="#"><img src="http://localhost:8000/images/users/{{actualUser['user']?.image}}" alt=""></a>
                                                             </div>
             
                                                             <!-- Name -->
@@ -132,7 +133,7 @@
 											<div class="card-footer mt-1">
 												<div class="d-flex flex-row bd-highlight mb-3" *ngFor="let comment of post.comments">
 													<div class="col-1 p-2">
-														<a href="#"><img src="{{comment.user.image}}" class="profile-img" alt=""></a>
+														<a href="#"><img src="http://localhost:8000/images/users/{{comment.user.image}}" class="profile-img" alt=""></a>
 													</div>
 													<div class="col-11 p-2" >
 														<h4><a href="#">{{comment.user.name}} {{comment.user.surname}}</a></h4>

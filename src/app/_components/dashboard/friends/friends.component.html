@@ -24,23 +24,24 @@
             <!-- Row -->
 			<div class="row">
                 <div class="col-12">
-                <div class="listings-container compact-list-layout margin-top-10" *ngFor="let friend of actualUser">
-                    <!-- | filter:searchFriends -->
+                <div class="listings-container compact-list-layout margin-top-10" *ngFor="let friend of actualUser['user']['following'] | filter:searchFriends, let i = index;">
 				
                     <!-- Job Listing -->
-                    <a href="dashboard-profile.html" class="job-listing">
+                    <a class="job-listing">
     
                         <!-- Job Listing Details -->
                         <div class="job-listing-details">
     
                             <!-- Logo -->
                             <div class="job-listing-company-logo">
-                                <img src="images/company-logo-01.png" alt="">
+                                <img src="http://localhost:8000/images/users/{{friend.image}}" alt="">
                             </div>
     
                             <!-- Details -->
                             <div class="job-listing-description">
-                                <h3 class="job-listing-title">{{friend.name}},{{friend[0].name}}</h3>
+                                <a style="cursor: pointer;" (click)="goToLoggedUser(i)">
+                                <h3 class="job-listing-title">{{friend.name}} {{friend.surname}}</h3>
+                                </a>
     
                                 <!-- Job Listing Footer -->
                                 <div class="job-listing-footer">

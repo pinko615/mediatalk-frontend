@@ -60,7 +60,7 @@
 											<div class="freelancer-avatar">
 												<div class="verified-badge"></div>
 												<a href="#">
-													<img src="{{post.user?.image}}" alt="">
+													<img src="http://localhost:8000/images/users/{{post.user?.image}}" alt="">
 												</a>
 											</div>
 											<!-- Profile / User Details -->
@@ -104,7 +104,7 @@
 											<div class="card-footer mt-1">
 												<div class="d-flex flex-row bd-highlight mb-3" *ngFor="let comment of post.comments">
 													<div class="col-1 p-2">
-														<a href="#"><img src="{{comment.user?.image}}" class="profile-img" alt=""></a>
+														<a href="#"><img src="http://localhost:8000/images/users/{{comment.user?.image}}" class="profile-img" width="100%" alt=""></a>
 													</div>
 													<div class="col-11 p-2" >
 														<h4><a href="#">{{comment.user?.name}} {{comment.user?.surname}}</a></h4>
