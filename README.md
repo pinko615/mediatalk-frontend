@@ -1,14 +1,14 @@
 # MediaTalk Social Network / Frontend
 MediaTalk is a social networking software developed with Angular (Frontend) and Laravel (Backend) that allows you to build social relationships, with people who share similar professional or personal interests.
 
-Visit the [Backend](https://github.com/pinko615) side of this project
+Visit the [Backend](https://github.com/pinko615/mediatalk-frontend) side of this project
 
 ![mediatalk-social-network](http://pink0.online/main-i.jpg)
 
 ## First steps
 You can download or clone this project to see the code of the entire website.
 ```
-git clone https://github.com/pinko615/GH-Proyecto-1-Netflix-Frontend.git
+https://github.com/pinko615/mediatalk-frontend.git
 ```
 
 ## Developed with
