@@ -63,28 +63,6 @@ logout(id) {
       });
     }
 
-    // clear token remove user from local storage to log user out
-
-// sendPasswordResetEmail(email: string): Observable<any>  {
-//     let url = this.baseUrl+'/reset-password';
-//     return this.http.post(this.apiUrl+'/password-reset-email', 
-//             { email: email, url:  url }, { headers: this.headers } )
-//         .pipe(
-//             map((response: Response) => {
-//                 return response;
-//             })
-//         );
-// }
-
-// resetPassword(newPassword: string, confirmedPassword: string, token: string): Observable<any> {
-//     return this.http.post(this.apiUrl+'/reset-password', { password: newPassword, 
-//             confirm_password: confirmedPassword, token: token }, { headers: this.headers } )
-//         .pipe(
-//             map((response: Response) => {
-//                 return response;
-//             })
-//         );
-// }
 
 isLogged() {
     return !!localStorage.getItem('user');
@@ -102,17 +80,6 @@ setUserName(username) {
 getUserById(id) {
     return this.http.get(this.apiUrl + `/users/${id}`);
 }
-
-// editProfile(body: any, token, id) {
-//     console.log(body, token, id);
-//     return this.http.put<any>(this.apiUrl + `/users/update/${id}`, body,
-//       {
-//         headers: {
-//           Authorization: 'Bearer ' + localStorage.getItem('user')
-//         }
-//       }
-//       );
-//     }
 
 editProfile(body: any, id){
     console.log(body, id, localStorage.getItem('user'));

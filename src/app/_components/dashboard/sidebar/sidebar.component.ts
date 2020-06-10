@@ -9,12 +9,21 @@ import { AuthenticationService } from '../../../_services/authentication.service
 })
 export class SidebarComponent implements OnInit {
 
+  actualUser = {};
+
   constructor(
     private router: Router,
     private authService: AuthenticationService
   ) { }
 
   ngOnInit(): void {
+  }
+
+  getLoggedUser() {
+    this.authService.getUserById(localStorage.getItem('id'))
+    .subscribe(res => {
+      console.log(res);
+    });
   }
 
   logout() {

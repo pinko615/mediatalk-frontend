@@ -18,7 +18,7 @@
 
                     <ul data-submenu-title="Start">
                         <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/"><i class="icon-line-awesome-home"></i> Home</a></li>
-                        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/friends"><i class="icon-feather-users"></i> Friends <span class="nav-tag">2</span></a></li>
+                        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/friends"><i class="icon-feather-users"></i> Following <span class="nav-tag">{{actualUser['user']?.following.length}}</span></a></li>
                         <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a href="#"><i class="icon-line-awesome-newspaper-o"></i> News</a></li>
                         <li><a href="#"><i class="icon-line-awesome-video-camera"></i> Videos</a></li>
                         <li><a href="#"><i class="icon-feather-music"></i> Music</a></li>
